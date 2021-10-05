@@ -50,8 +50,11 @@ $("#register_admin").on("click", ()=>{
       passRejInput22.value = '';
       const usernamRejInput2 = document.getElementById("username"); 
       usernamRejInput2.value = '';
-    //$(".chat-num-messages").html("Group Chat");
-    renderCurrentUser(somedata.user);
+    
+    $(".chat-num-messages").html("Group Chat");
+    var string1 = `<h1>Welcome `;
+    $(".chat-with").append(string1 + username +" (Admin)");
+    //renderCurrentUser(somedata.user);
     
     let uid = somedata.user.uid;
     currentUserUid = uid;
@@ -81,20 +84,6 @@ $("#register_admin").on("click", ()=>{
     
     groupChat = true;
     receiver_id = "group";
-    //alert("after Creat Admin: " + groupChat);
-    /*
-    let userRef = rtdb.ref(db, `/users/${uid}`); GOOD
-    var user = {
-            name: username,
-            uid: uid,
-            email: email,
-            roles:{
-              admin:true
-            }
-        }
-        //writeUserData(user);
-    rtdb.push(userRef,user);
-    */
  
   }).catch(function(error) {
     // Handle Errors here.
@@ -123,8 +112,10 @@ $("#register_user").on("click", ()=>{
       passRejInput2.value = '';
       const usernamRejInput = document.getElementById("username2"); 
       usernamRejInput.value = '';
-    //$(".chat-num-messages").html("Group Chat");
-    renderCurrentUser(somedata.user);
+    $(".chat-num-messages").html("Group Chat");
+    var string1 = `<h1>Welcome `;
+    $(".chat-with").append(string1 + username2 +" (User)");
+    //renderCurrentUser(somedata.user);
     
     let uid2 = somedata.user.uid;
     currentUserUid = uid2;
@@ -205,27 +196,22 @@ fbauth.onAuthStateChanged(auth, user => {
         $("#login").hide();
         $("#registerUser").hide();
         $("#registerAdmin").hide();
-        
-        //$("#list").show(); 
+        document.getElementById("registerAdmin").style.display = "none";
+        document.getElementById("registerUser").style.display = "none";       
         document.getElementById("after_login").style.display = "block";
+        
         userObjGlobal = user;
         renderLogout(user);
         renderCurrentUser(user);
         renderUser(user);
         renderChats(user);
-  /*
-     / let changeRoleRef = rtdb.ref(db, "/change_role");
-        rtdb.onValue(changeRoleRef, ss=>{
-           $(".changeRole").show();
-           $(".changeRole").click(clickHandlerManagRole);       
-   })*/        
+     
       } else {
         $("#login").show();
         $("#registerUser").hide();
         $("#registerAdmin").hide();
         //$("#registerUser").show();
         //$("#registerAdmin").show();
-        document.getElementById("registerAdmin").style.display = "none";
         document.getElementById("after_login").style.display = "none";
       }
 });
@@ -303,7 +289,7 @@ let theIds = Object.keys(usersObj);
           <img src="" alt="" />
           <div class="about" data-id-listName1=${anId}>
             <div class="name" data-id-listName=${anId}>${userObjj.name} (Admin)</div>
-            <div class="status">
+            <div class="status-online">
               <i class="fa fa-circle online"></i> online
             </div>
             <button class="changeRole" type="button" id="changeRole" data-id-changeBtn=${anId}>Change Role</button>
@@ -315,7 +301,7 @@ let theIds = Object.keys(usersObj);
           <img src="" alt="" />
           <div class="about" data-id-listName1=${anId}>
             <div class="name" data-id-listName=${anId}>${userObjj.name} (Admin)</div>
-            <div class="status">
+            <div class="status-offline">
               <i class="fa fa-circle offline"></i> offline
             </div>
             <button class="changeRole" type="button" id="changeRole" data-id-changeBtn=${anId}>Change Role</button>
@@ -331,7 +317,7 @@ let theIds = Object.keys(usersObj);
           <img src="" alt="" />
           <div class="about" data-id-listName1=${anId}>
             <div class="name" data-id-listName=${anId}>${userObjj.name} (User)</div>
-            <div class="status">
+            <div class="status-online">
               <i class="fa fa-circle online"></i> online
             </div>
             <button class="changeRole" type="button" id="changeRole" data-id-changeBtn=${anId}>Change Role</button>
@@ -344,7 +330,7 @@ let theIds = Object.keys(usersObj);
           <img src="" alt="" />
           <div class="about" data-id-listName1=${anId}>
             <div class="name" data-id-listName=${anId}>${userObjj.name} (User)</div>
-            <div class="status">
+            <div class="status-offline">
               <i class="fa fa-circle offline"></i> offline
             </div>
             <button class="changeRole" type="button" id="changeRole" data-id-changeBtn=${anId}>Change Role</button>
