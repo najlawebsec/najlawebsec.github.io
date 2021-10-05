@@ -1,10 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-
-$green: #86BB71;
-$blue: #94C2ED;
-$orange: #E38968;
-$gray: #92959E;
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -15,7 +9,8 @@ body {
   padding: 40px 0;
   color: white;
 }
-.after_login{
+
+.after_login {
   display: none;
 }
 
@@ -27,343 +22,293 @@ body {
 }
 
 .people-list {
-  width:260px;
+  width: 260px;
   float: left;
-  
-  .list{
-    overflow-y: scroll;
-  }
-  .search {
-    padding: 10px;
-  }
-  
-  input {
-    border-radius: 3px;
-    border: none;
-    padding: 14px;
-    color: white;
-    background: #6A6C75;
-    width: 90%;
-    font-size: 14px;
-  }
   /*
   .fa-search {
     position: relative;
    left: -25px;
   }
   */
-  
-  ul {
-    padding: 20px;
-    height: 770px;
- 
-    
-    
-    
-    li {
-      padding-bottom: 20px;
-    }
-  }
-  
-  img {
-    float: left;
-  }
-  
-  .about {
-    float: left;
-    margin-top: 8px;
-  }
-  .name{
+}
+.people-list .list {
+  overflow-y: scroll;
+}
+.people-list .search {
+  padding: 10px;
+}
+.people-list input {
+  border-radius: 3px;
+  border: none;
+  padding: 14px;
+  color: white;
+  background: #6A6C75;
+  width: 90%;
+  font-size: 14px;
+}
+.people-list ul {
+  padding: 20px;
+  height: 770px;
+}
+.people-list ul li {
+  padding-bottom: 20px;
+}
+.people-list img {
+  float: left;
+}
+.people-list .about {
+  float: left;
+  margin-top: 8px;
+}
+.people-list .name {
   cursor: pointer;
-  }
-  
-  .about {
-    padding-left: 8px;
-    //cursor: pointer;
-    &:hover {
-        background: darken($gray, 20%);
-      }
-  }
-  
-  .status {
-    color: $gray;
-  }
-  
+}
+.people-list .about {
+  padding-left: 8px;
+}
+.people-list .about:hover {
+  background: #5f626b;
+}
+.people-list .status {
+  color: #92959E;
 }
 
 .chat {
   width: 490px;
-  float:left;
+  float: left;
   background: #F2F5F8;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  
   color: #434651;
-  
-  .chat-header {
-    padding: 20px;
-    border-bottom: 2px solid white;
-    
-    img {
-      float: left;
-    }
-    
-    .chat-about {
-      float: left;
-      padding-left: 10px;
-      margin-top: 6px;
-    }
-    
-    .chat-with {
-      font-weight: bold;
-      font-size: 16px;
-    }
-    
-    .chat-num-messages {
-      color: $gray;
-    }
-    
-    .fa-star {
-      float: right;
-      color: #D8DADF;
-      font-size: 20px;
-      margin-top: 12px;
-    }
-  }
-     .logOut {
-      float: right;
-      color: #D8DADF;
-      font-size: 20px;
-      margin-top: 12px;
-    }
-  
-  .chat-history {
-    padding: 30px 30px 20px;
-    border-bottom: 2px solid white;
-    overflow-y: scroll;
-    height: 575px;
-    
-    .message-data {
-      margin-bottom: 15px;
-    }
-    
-    .message-data-time {
-      color: lighten($gray, 8%);
-      padding-left: 6px;
-    }
-    
-    .message {      
-      color: white;
-      //padding: 18px 20px;
-      padding: 10px 20px;
-      line-height: 26px;
-      //font-size: 16px;
-      font-size: 14px;
-      border-radius: 7px;
-      margin-bottom: 30px;
-      width: 90%;
-      position: relative;
-      
-      &:after {
-        bottom: 100%;
-        left: 7%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-bottom-color: $green;
-        border-width: 10px;
-        margin-left: -10px;
-      }
-    }
-    
-    .my-message {
-      background: $green;
-      //cursor: pointer;
-        &:hover {
-        background: darken($green, 20%);
-      }
-    }
-    
-    .other-message {
-      background: $blue;
-      //cursor: pointer;
-        &:hover {
-        background: darken($blue, 20%);
-        //display: inline-block;
-     }
-      
-      &:after {
-        border-bottom-color: $blue;
-        left: 93%;
-      }
-    }
-    
-  }
-  
-  .chat-message {
-    padding: 30px;
-    
-    .input_msg {
-      width: 100%;
-      border: none;
-      padding: 10px 20px;
-      font: 14px/22px "Lato", Arial, sans-serif;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      resize: none;
-      
-    }
-    
-    .fa-file-o, .fa-file-image-o {
-      font-size: 16px;
-      color: gray;
-      cursor: pointer;
-      
-    }
-    
-    button {
-      float: right;
-      color: $blue;
-      font-size: 16px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      background: #F2F5F8;
-      
-      &:hover {
-        color: darken($blue, 7%);
-      }
-    }
-  }
+}
+.chat .chat-header {
+  padding: 20px;
+  border-bottom: 2px solid white;
+}
+.chat .chat-header img {
+  float: left;
+}
+.chat .chat-header .chat-about {
+  float: left;
+  padding-left: 10px;
+  margin-top: 6px;
+}
+.chat .chat-header .chat-with {
+  font-weight: bold;
+  font-size: 16px;
+}
+.chat .chat-header .chat-num-messages {
+  color: #92959E;
+}
+.chat .chat-header .fa-star {
+  float: right;
+  color: #D8DADF;
+  font-size: 20px;
+  margin-top: 12px;
+}
+.chat .logOut {
+  float: right;
+  color: #D8DADF;
+  font-size: 20px;
+  margin-top: 12px;
+}
+.chat .chat-history {
+  padding: 30px 30px 20px;
+  border-bottom: 2px solid white;
+  overflow-y: scroll;
+  height: 575px;
+}
+.chat .chat-history .message-data {
+  margin-bottom: 15px;
+}
+.chat .chat-history .message-data-time {
+  color: #a8aab1;
+  padding-left: 6px;
+}
+.chat .chat-history .message {
+  color: white;
+  padding: 10px 20px;
+  line-height: 26px;
+  font-size: 14px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
+}
+.chat .chat-history .message:after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #86BB71;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.chat .chat-history .my-message {
+  background: #86BB71;
+}
+.chat .chat-history .my-message:hover {
+  background: #548640;
+}
+.chat .chat-history .other-message {
+  background: #94C2ED;
+}
+.chat .chat-history .other-message:hover {
+  background: #3d90de;
+}
+.chat .chat-history .other-message:after {
+  border-bottom-color: #94C2ED;
+  left: 93%;
+}
+.chat .chat-message {
+  padding: 30px;
+}
+.chat .chat-message .input_msg {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  font: 14px/22px "Lato", Arial, sans-serif;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+}
+.chat .chat-message .fa-file-o, .chat .chat-message .fa-file-image-o {
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+}
+.chat .chat-message button {
+  float: right;
+  color: #94C2ED;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #F2F5F8;
+}
+.chat .chat-message button:hover {
+  color: #75b1e8;
 }
 
 .button_log {
-      float: right;
-      color: $blue;
-      font-size: 16px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      background: #F2F5F8;
-      
-      &:hover {
-        color: darken($blue, 20%);
-      }
-    }
+  float: right;
+  color: #94C2ED;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #F2F5F8;
+}
+.button_log:hover {
+  color: #3d90de;
+}
 
-.groupChat{
-  color: $blue;
+.groupChat {
+  color: #94C2ED;
   font-size: 16px;
   cursor: pointer;
   font-weight: bold;
   background: none;
-  &:hover {
-   color: darken($blue, 20%);
 }
-}
-
-.button_delete_myMsg{
-  float: right;
-  color: white;
-  background: $green;
-      font-size: 11px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;      
-      &:hover {
-        color: darken($blue, 80%);
-      }
-}
-.button_delete_otherMsg{
-float: right;
-  color: white;
-  background: $blue;
-      font-size: 11px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;     
-      &:hover {
-        color: darken($blue, 80%);
-      }
+.groupChat:hover {
+  color: #3d90de;
 }
 
-.button_edit_myMsg{
-  //margin-bottom: none;
-  //padding: none;
-  //padding: 40px 0px 20px;
+.button_delete_myMsg {
   float: right;
   color: white;
-  background: $green;
+  background: #86BB71;
   font-size: 11px;
   text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;     
-      &:hover {
-        color: darken($blue, 80%);
-      }
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button_delete_myMsg:hover {
+  color: black;
 }
 
-.button_edit_otherMsg{
-float: right;
+.button_delete_otherMsg {
+  float: right;
   color: white;
-  background: $blue;
-      font-size: 11px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    //background: none;
-      
-      &:hover {
-        color: darken($blue, 80%);
-      }
+  background: #94C2ED;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button_delete_otherMsg:hover {
+  color: black;
 }
 
-.button_sendEdit{
-//float: right;
-      //color: $blue;
+.button_edit_myMsg {
+  float: right;
   color: white;
-      font-size: 11px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    background: none;
-      
-      &:hover {
-        color: darken($blue, 80%);
-      }
+  background: #86BB71;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button_edit_myMsg:hover {
+  color: black;
+}
+
+.button_edit_otherMsg {
+  float: right;
+  color: white;
+  background: #94C2ED;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button_edit_otherMsg:hover {
+  color: black;
+}
+
+.button_sendEdit {
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+}
+.button_sendEdit:hover {
+  color: black;
 }
 
 .edited {
   color: white;
-      font-size: 12px;
-      //text-transform: uppercase;
+  font-size: 12px;
 }
 
 .online, .offline, .me {
-    margin-right: 3px;
-    font-size: 10px;
-  }
-  
-.online {
-  color: $green;
+  margin-right: 3px;
+  font-size: 10px;
 }
-  
+
+.online {
+  color: #86BB71;
+}
+
 .offline {
-  color: $orange;
+  color: #E38968;
 }
 
 .me {
-  color: $blue;
+  color: #94C2ED;
 }
 
 .align-left {
@@ -379,12 +324,12 @@ float: right;
 }
 
 .clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .main-div, .loggedin-div {
@@ -392,11 +337,9 @@ float: right;
   margin: 0px auto;
   margin-top: 70px;
   padding: 10px;
-  //display: none;
 }
 
 .main-div .input_ {
-  //display: block;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #fff;
@@ -413,14 +356,12 @@ float: right;
   border: 1px solid #777;
 }
 
-.main-div .button_, .loggedin-div .button_  {
-  //background: #5d8ffc;
-  background: $blue;
+.main-div .button_, .loggedin-div .button_ {
+  background: #94C2ED;
   color: #fff;
   border: 1px solid #5d8ffc;
   border-radius: 5px;
   padding: 15px;
-  //display: block;
   width: 100%;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -428,52 +369,50 @@ float: right;
 }
 
 .main-div .button_:hover, .loggedin-div .button_:hover {
-  background: darken($blue, 20%);
+  background: #3d90de;
   color: white;
   border: 1px solid #5d8ffc;
   cursor: pointer;
 }
 
-   .topic_ {
-      font-weight: bold;
-      font-size: 80px;
-      font: 30px "Lato", Arial, sans-serif;
-  padding: 40px 0;
-  color: darken($blue, 40%);
-    }
-
-.creatAccount{
-  color: darken($blue, 20%);
-  cursor: pointer;
+.topic_ {
   font-weight: bold;
-      
-      &:hover {
-        color: darken($blue, 40%);
-      }
+  font-size: 80px;
+  font: 30px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: #1a5d9b;
 }
 
-.creatAdmin{
+.creatAccount {
+  color: #3d90de;
+  cursor: pointer;
+  font-weight: bold;
+}
+.creatAccount:hover {
+  color: #1a5d9b;
+}
+
+.creatAdmin {
   color: white;
   cursor: pointer;
-  //font-weight: bold;   
-      &:hover {
-        color: darken($blue, 40%);
-      }
+}
+.creatAdmin:hover {
+  color: #1a5d9b;
 }
 
-.backLogin{
-  color: darken($blue, 20%);
+.backLogin {
+  color: #3d90de;
   cursor: pointer;
   font-weight: bold;
-      
-      &:hover {
-        color: darken($blue, 40%);
-      }
 }
-#registerUser{
-  display:none;
+.backLogin:hover {
+  color: #1a5d9b;
 }
 
-#registerAdmin{
-  display:none;
+#registerUser {
+  display: none;
+}
+
+#registerAdmin {
+  display: none;
 }
