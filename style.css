@@ -30,6 +30,11 @@ body {
    left: -25px;
   }
   */
+  
+  ul {
+    list-style-type: none;
+}
+  
 }
 .people-list .list {
   overflow-y: scroll;
