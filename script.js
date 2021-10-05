@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
  // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
 import * as rtdb from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
 import * as fbauth from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
@@ -50,6 +50,8 @@ $("#register_admin").on("click", ()=>{
       passRejInput22.value = '';
       const usernamRejInput2 = document.getElementById("username"); 
       usernamRejInput2.value = '';
+    //$(".chat-num-messages").html("Group Chat");
+    renderCurrentUser(somedata.user);
     
     let uid = somedata.user.uid;
     currentUserUid = uid;
@@ -121,6 +123,8 @@ $("#register_user").on("click", ()=>{
       passRejInput2.value = '';
       const usernamRejInput = document.getElementById("username2"); 
       usernamRejInput.value = '';
+    //$(".chat-num-messages").html("Group Chat");
+    renderCurrentUser(somedata.user);
     
     let uid2 = somedata.user.uid;
     currentUserUid = uid2;
@@ -182,6 +186,9 @@ $("#login").on("click", ()=>{
       receiver_id = "group";
       
       $(".chat-num-messages").html("Group Chat");
+      //alert(somedata.user);
+      //renderCurrentUser(somedata.user);
+      
       
     }).catch(function(error) {
       // Handle Errors here.
@@ -196,6 +203,9 @@ fbauth.onAuthStateChanged(auth, user => {
   //$("#list").empty();
       if (!!user){
         $("#login").hide();
+        $("#registerUser").hide();
+        $("#registerAdmin").hide();
+        
         //$("#list").show(); 
         document.getElementById("after_login").style.display = "block";
         userObjGlobal = user;
@@ -211,6 +221,10 @@ fbauth.onAuthStateChanged(auth, user => {
    })*/        
       } else {
         $("#login").show();
+        $("#registerUser").hide();
+        $("#registerAdmin").hide();
+        //$("#registerUser").show();
+        //$("#registerAdmin").show();
         document.getElementById("after_login").style.display = "none";
       }
 });
@@ -225,6 +239,7 @@ let renderLogout = function(userObj){
     $(".chat-with").empty();
     $(".addListHere").empty();
     $(".groupChat").empty();
+    $(".chat-num-messages").html("Group Chat");
     $("#logout").remove();
     document.getElementById("after_login").style.display = "none";
     admin = false;
@@ -661,11 +676,7 @@ var clickHandlerSpecificChat = function(evt){
           
         $(".chat-num-messages").html("Chat with " + receiver_name);
      $(".chat-num-messages").append('<div id="groupChat" class="groupChat">Go to the Group Chat</div>');
-          
-          //$(".search").append('<div id="groupChat" class="groupChat">Go to the Group Chat</div>');
-          //$(".groupChat").show();
-          //$(".groupChat").show();
-          //renderChats(userObjGlobal);
+
           $(".groupChat").click(clickHandlerGroupChat);         
         })
   //alert(receiver_id);
@@ -700,3 +711,21 @@ sendBtn.addEventListener("click", clickHandlerMsg);
 
 $(".button_edit").click(clickHandlerEdit);
 $(".button_delete").click(clickHandlerDelete);
+
+$(".creatAccount").on("click", ()=>{
+  //alert("Register User");
+  $("#login").hide();
+  $("#registerUser").show();
+})
+
+$(".backLogin").on("click", ()=>{
+  //alert("Register User");
+  $("#login").show();
+  $("#registerUser").hide();
+  $("#registerAdmin").hide();
+})
+
+$(".creatAdmin").on("click", ()=>{
+  $("#login").hide();
+  $("#registerAdmin").show();
+})
