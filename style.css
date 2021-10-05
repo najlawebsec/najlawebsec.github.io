@@ -30,8 +30,6 @@ body {
    left: -25px;
   }
   */
-
-  
 }
 .people-list .list {
   overflow-y: scroll;
@@ -73,8 +71,11 @@ body {
 .people-list .about:hover {
   background: #5f626b;
 }
-.people-list .status {
-  color: #92959E;
+.people-list .status-online {
+  color: #86BB71;
+}
+.people-list .status-offline {
+  color: #E38968;
 }
 
 .chat {
@@ -341,11 +342,9 @@ body {
   margin: 0px auto;
   margin-top: 70px;
   padding: 10px;
-  //display: none;
 }
 
 .main-div .input_ {
-  //display: block;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #fff;
@@ -362,14 +361,12 @@ body {
   border: 1px solid #777;
 }
 
-.main-div .button_, .loggedin-div .button_  {
-  //background: #5d8ffc;
-  background: $blue;
+.main-div .button_, .loggedin-div .button_ {
+  background: #94C2ED;
   color: #fff;
   border: 1px solid #5d8ffc;
   border-radius: 5px;
   padding: 15px;
-  //display: block;
   width: 100%;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -377,53 +374,50 @@ body {
 }
 
 .main-div .button_:hover, .loggedin-div .button_:hover {
-  background: darken($blue, 20%);
+  background: #3d90de;
   color: white;
   border: 1px solid #5d8ffc;
   cursor: pointer;
 }
 
-   .topic_ {
-      font-weight: bold;
-      font-size: 80px;
-      font: 30px "Lato", Arial, sans-serif;
-  padding: 40px 0;
-  color: darken($blue, 40%);
-    }
-
-.creatAccount{
-  color: darken($blue, 20%);
-  cursor: pointer;
+.topic_ {
   font-weight: bold;
-
-      &:hover {
-        color: darken($blue, 40%);
-      }
+  font-size: 80px;
+  font: 30px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: #1a5d9b;
 }
 
-.creatAdmin{
+.creatAccount {
+  color: #3d90de;
+  cursor: pointer;
+  font-weight: bold;
+}
+.creatAccount:hover {
+  color: #1a5d9b;
+}
+
+.creatAdmin {
   color: white;
   cursor: pointer;
-  //font-weight: bold;   
-      &:hover {
-        color: darken($blue, 40%);
-      }
+}
+.creatAdmin:hover {
+  color: #1a5d9b;
 }
 
-.backLogin{
-  color: darken($blue, 20%);
+.backLogin {
+  color: #3d90de;
   cursor: pointer;
   font-weight: bold;
-
-      &:hover {
-        color: darken($blue, 40%);
-      }
 }
-#registerUser{
-  display:none;
+.backLogin:hover {
+  color: #1a5d9b;
 }
 
-#registerAdmin{
-  display:none;
+#registerUser {
+  display: none;
 }
 
+#registerAdmin {
+  display: none;
+}
