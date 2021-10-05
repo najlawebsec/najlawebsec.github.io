@@ -332,7 +332,6 @@ body {
   height: 0;
 }
 
-/*
 .main-div, .loggedin-div {
   width: 20%;
   margin: 0px auto;
@@ -423,4 +422,4 @@ body {
 #registerAdmin{
   display:none;
 }
-*/
+
