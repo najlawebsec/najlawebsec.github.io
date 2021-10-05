@@ -31,9 +31,9 @@ body {
   }
   */
   
-  ul {
-    list-style-type: none;
-}
+.clearfix{
+  list-style-type: none;
+  }
   
 }
 .people-list .list {
