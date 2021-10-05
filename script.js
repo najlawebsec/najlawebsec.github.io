@@ -225,6 +225,7 @@ fbauth.onAuthStateChanged(auth, user => {
         $("#registerAdmin").hide();
         //$("#registerUser").show();
         //$("#registerAdmin").show();
+        document.getElementById("registerAdmin").style.display = "none";
         document.getElementById("after_login").style.display = "none";
       }
 });
