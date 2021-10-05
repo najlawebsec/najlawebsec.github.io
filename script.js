@@ -84,7 +84,17 @@ $("#register_admin").on("click", ()=>{
     
     groupChat = true;
     receiver_id = "group";
- 
+    
+    $(".changeRole").show();
+    $(".changeRole").click(clickHandlerManagRole);
+    /*
+    let changeRoleRef = rtdb.ref(db, "/change_role");
+      rtdb.onValue(changeRoleRef, ss=>{        
+        //$(".changeRole").click(clickHandlerManagRole); 
+        $(".changeRole").click(clickHandlerManagRole);
+       });
+  */
+    
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
