@@ -169,6 +169,12 @@ body {
   border-bottom-color: #94C2ED;
   left: 93%;
 }
+.chat .chat-history ul {
+  list-style-type: none;
+}
+.chat .chat-history li {
+  list-style-type: none;
+}
 .chat .chat-message {
   padding: 30px;
 }
