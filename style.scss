@@ -332,14 +332,17 @@ body {
   height: 0;
 }
 
+/*
 .main-div, .loggedin-div {
   width: 20%;
   margin: 0px auto;
   margin-top: 70px;
   padding: 10px;
+  //display: none;
 }
 
 .main-div .input_ {
+  //display: block;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #fff;
@@ -356,12 +359,14 @@ body {
   border: 1px solid #777;
 }
 
-.main-div .button_, .loggedin-div .button_ {
-  background: #94C2ED;
+.main-div .button_, .loggedin-div .button_  {
+  //background: #5d8ffc;
+  background: $blue;
   color: #fff;
   border: 1px solid #5d8ffc;
   border-radius: 5px;
   padding: 15px;
+  //display: block;
   width: 100%;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -369,50 +374,53 @@ body {
 }
 
 .main-div .button_:hover, .loggedin-div .button_:hover {
-  background: #3d90de;
+  background: darken($blue, 20%);
   color: white;
   border: 1px solid #5d8ffc;
   cursor: pointer;
 }
 
-.topic_ {
-  font-weight: bold;
-  font-size: 80px;
-  font: 30px "Lato", Arial, sans-serif;
+   .topic_ {
+      font-weight: bold;
+      font-size: 80px;
+      font: 30px "Lato", Arial, sans-serif;
   padding: 40px 0;
-  color: #1a5d9b;
-}
+  color: darken($blue, 40%);
+    }
 
-.creatAccount {
-  color: #3d90de;
+.creatAccount{
+  color: darken($blue, 20%);
   cursor: pointer;
   font-weight: bold;
-}
-.creatAccount:hover {
-  color: #1a5d9b;
+
+      &:hover {
+        color: darken($blue, 40%);
+      }
 }
 
-.creatAdmin {
+.creatAdmin{
   color: white;
   cursor: pointer;
-}
-.creatAdmin:hover {
-  color: #1a5d9b;
+  //font-weight: bold;   
+      &:hover {
+        color: darken($blue, 40%);
+      }
 }
 
-.backLogin {
-  color: #3d90de;
+.backLogin{
+  color: darken($blue, 20%);
   cursor: pointer;
   font-weight: bold;
+
+      &:hover {
+        color: darken($blue, 40%);
+      }
 }
-.backLogin:hover {
-  color: #1a5d9b;
+#registerUser{
+  display:none;
 }
 
-#registerUser {
-  display: none;
+#registerAdmin{
+  display:none;
 }
-
-#registerAdmin {
-  display: none;
-}
+*/
